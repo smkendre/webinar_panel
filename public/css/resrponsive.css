@@ -1,0 +1,309 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@media only screen and (min-device-width: 1400px) and (max-device-width: 3500px) {
+	
+	.idxrightcon {
+		top:22%;
+	}
+	.loginbox {
+		top:27%;
+	}
+	
+	.conzoomlink {
+		bottom:27%;
+	}
+		
+	
+}
+
+
+@media only screen and (max-width: 1480px){ 
+	
+	body {
+		font-size:14px;
+		line-height:22px;
+	}
+	
+	
+	.innercontainwrapper, .speakerwrapper {
+		width:90%;
+	}
+	.footerwrapper, .innercontainwrapper {
+		width: 90%;
+		padding: 40px 0;
+	}
+	
+	
+}
+
+@media only screen and (max-width: 1280px){ 
+	
+}
+
+@media only screen and (max-width: 1180px){ 
+	
+	.loginbg {
+		padding:0 0 50px 0;
+	}
+	.loginbox {
+		float:none;
+		position:relative;
+		width:450px;
+		margin:0 auto;
+		padding:50px 0;
+	}
+	.idxrightcon {
+		width:90%;
+		right:inherit;
+		top:inherit;
+		position:relative;
+		padding:2%;
+		max-height:inherit;
+		margin:0 auto;
+	}
+	.datetime {
+		position:relative;
+		padding:30px 0 0 0;
+		left:inherit;
+		bottom: inherit;
+		width:90%;
+		margin:0 auto;
+	}
+	
+	.mainscreen {
+		width:100%;
+		height:inherit;
+	}
+	.mainscreen .mainfooter {
+		position:relative;
+	}
+	.maintopbg {
+		position:relative;
+		clear:both;
+		display:table;
+		content:"";
+	}
+	.navbg {
+		background:#3329e2;
+		position:relative;
+		bottom:inherit;
+		left:0;
+		width:100%;
+		display:table;
+		clear:both;
+		content:"";
+		padding:20px 0;
+	}
+	.navmenu a {
+		margin:15px;
+		color:#fff;
+	}
+	.navmenu a:hover {
+		color:#b328f5;
+	}
+	
+	
+	.rsinnerimg {
+		display:table;
+	} 
+	.innermaincontain {
+		width:100%;
+		height:inherit;
+		position:relative;
+		left:0;
+		top:0;
+	}
+	.conferencebg, .resourcebg, .networkingbg {
+		background:none;
+	}
+	
+	
+	.conzoomlink {
+		bottom:26%;
+		font-size:12px;
+	}
+	
+	
+	
+	
+}
+
+@media only screen and (max-width: 990px){
+	
+}
+
+
+
+@media only screen and (max-width: 800px){
+		
+	.idxspeakerbox {
+		width: 44%;
+		padding:2%;
+		margin: 1%;
+	}
+	.idxpartnersbox {
+		width: 28%;
+		margin: 1%;
+		padding: 7px 1%;
+		font-size: 10px;
+	}
+	
+	.mainfooterleft {
+		float:none;
+		display:block;
+		font-size:12px;
+		padding:0;
+		width:90%;
+		margin:0 auto;
+		text-align:center;
+	}
+	.mainfooterright {
+		float:none;
+		display:block;
+		width:120px;
+		padding:0;
+		margin:10px auto 0 auto;
+	}
+	
+	.maintopcol1 {
+		margin:0;
+		padding:10px 0 10px 3%;
+	}
+	.maintopcol1 img {
+		height:30px;
+	}
+	.innertopmenubg {
+		top:10px;
+		right:2%;
+	}
+	.attendingbox {
+		top:7px;
+		right:8%;
+	}
+	.conzoomlink {
+		bottom:0;
+		width:90%;
+		padding:10px 5%;
+		font-size:12px;
+		position:relative;
+	}
+	
+		
+}
+
+
+@media only screen and (max-width: 650px){ 
+	.loginbox {
+		float:none;
+		position:relative;
+		width:300px;
+		margin:0 auto;
+		padding:50px 0;
+	}
+	.idxpartnersbox {
+		width: 43%;
+		margin: 1%;
+		padding: 7px 2%;
+		font-size: 10px;
+	}
+	
+	
+	.attendingbox {
+		top:7px;
+		right:14%;
+	}
+	.maintopcol2 {
+		display:block;
+		width:100%;
+		margin:60px auto 0 auto;
+	}
+	
+	
+	.popupformmain1box {
+		display: table;
+		content: "";
+		width: 100%;
+		clear: both;
+		margin:0 !important;
+	}
+	.popupformmain1boxcol1 {
+		float: none;
+		display: block;
+		width: 100%;
+		margin:10px 0;
+	}
+	.popupformmain1boxcol2 {
+		float: none;
+		display: block;
+		width: 100%;
+		margin:0px 0;
+	}
+	
+	
+	.table2 {
+		border: 2px solid #3329e2;
+	}
+	.table2 th {
+		padding:7px;
+		font-size: 12px;
+		line-height: normal;
+	}
+	.table2 td {
+		padding:7px;
+		line-height: normal;
+		font-size:12px;
+	}
+	
+	
+	.popmainheading1 {
+		text-align:center;
+	}
+	.popmainheading1 span {
+		display:block;
+		float:none;
+		width:100%;
+		text-align:center;
+		margin:0 0 10px 0;
+	}
+	.popconfboxcol1 {
+		width:100%;
+		float:none;
+		padding:10px;
+		display:block;
+	}
+	.popconfboxcol2 {
+		width:100%;
+		display:block;
+		float:none;
+		padding:10px;
+	}
+	.popconfboxcol2maincol1 {
+		width:100%;
+		display:block;
+	}
+	.popconfboxcol2maincol2 img {
+		width:80px;
+		margin:5px;
+	}
+	.popconfboxcol2maincol3 img {
+		width:40px;
+		margin:5px;
+	}
+	.popconfboxcol2maincol2 {
+		width:39%;
+	}
+	.popconfboxcol2maincol3 {
+		width:60%;
+	}
+	.tab1 {
+		margin: 0;
+		float: none;
+		text-align:center;
+	}
+
+	
+	
+	
+}

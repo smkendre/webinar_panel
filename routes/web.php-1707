@@ -1,0 +1,31 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', 'UserController@index');
+Route::post('/userlogin', 'UserController@login')->name('userlogin');
+Route::get('/api/register', 'UserController@register')->name('api/register');
+
+Route::get('/logout', 'UserController@logout')->name('logout');
+Auth::routes();
+
+Route::group(['middleware' => ['usersession']], function () {
+    Route::get('/sessions', 'SessionsController@index')->name('sessions');
+    Route::get('/agenda', 'SessionsController@agenda')->name('agenda');
+    Route::get('/speakers', 'SpeakersController@index')->name('speakers');
+    Route::get('/assets', 'SessionsController@assets')->name('assets');
+    Route::post('/track-event', 'SessionTrackingController@track_session')->name('track-event');
+    Route::post('/track-close-event', 'SessionTrackingController@track_close_session')->name('track-close-event');
+    Route::get('/profile', 'AttendeesController@view_profile')->name('profile');
+    Route::get('/edit-profile', 'AttendeesController@edit_profile')->name('edit-profile');
+    Route::post('/edit-profile', 'AttendeesController@edit_profile')->name('edit-profile');
+});
