@@ -2,18 +2,36 @@
 /* CSS Document */
 
 
-@media only screen and (min-device-width: 1400px) and (max-device-width: 3500px) {
+@media only screen and (min-device-width: 1400px) and (max-device-width: 5500px) {
 	
-	.idxrightcon {
-		top:22%;
+	.mainscreenvideo {
+		height: 55vh;
+	}
+	.screenright, .screenright1 {
+		max-height:62.7vh;
+	}
+	.screenright2 {
+		min-height:62.7vh;
+	}
+	.requestmeetingmainhe {
+		min-height: 56vh;
+	}
+		
+	.loginbg {
+		height:100vh;
 	}
 	.loginbox {
-		top:27%;
+		width:32%;
+		padding:13% 0 50px 5%;
 	}
-	
-	.conzoomlink {
-		bottom:27%;
-	}
+	.idxrightcon {
+		width:38%;
+		right:5%;
+		top:15%;
+		max-height:700px;
+	}	
+		
+		
 		
 	
 }
@@ -24,6 +42,17 @@
 	body {
 		font-size:14px;
 		line-height:22px;
+	}
+	
+	#Arrowfix {
+		width:36px;
+		height:36px;
+	}
+	#Arrowfix span {
+		margin-left:-6px;
+		margin-top:-10px;
+		border:6px solid transparent;
+		border-bottom-color:#ffffff
 	}
 	
 	
@@ -38,7 +67,26 @@
 	
 }
 
-@media only screen and (max-width: 1280px){ 
+@media only screen and (max-width: 1320px){ 
+	
+	.tabmenubottom {
+		bottom:30px;
+	}
+	.tabmenubottom a {
+		margin:5px 15px;
+		font-size:10px;
+	}
+	.tabmenubottom img {
+		width:30px;
+	}
+	.zoomnotreglink {
+		padding:5px 2%;
+		font-size:14px;
+	}
+
+	
+	
+	
 	
 }
 
@@ -73,57 +121,48 @@
 	}
 	
 	.mainscreen {
-		width:100%;
-		height:inherit;
-	}
-	.mainscreen .mainfooter {
-		position:relative;
+		height:inherit !important;
 	}
 	.maintopbg {
 		position:relative;
-		clear:both;
-		display:table;
-		content:"";
 	}
-	.navbg {
-		background:#3329e2;
+	
+	.tabmenubottom {
+		position:relative;
+		bottom:inherit;
+	}
+	.mainscreen .mainfooter {
 		position:relative;
 		bottom:inherit;
 		left:0;
-		width:100%;
-		display:table;
-		clear:both;
-		content:"";
-		padding:20px 0;
-	}
-	.navmenu a {
-		margin:15px;
-		color:#fff;
-	}
-	.navmenu a:hover {
-		color:#b328f5;
 	}
 	
-	
-	.rsinnerimg {
-		display:table;
-	} 
-	.innermaincontain {
-		width:100%;
-		height:inherit;
+	.mainscreenleft {
 		position:relative;
-		left:0;
-		top:0;
+		left:inherit;
+		top:inherit;
+		width:65%;
+		display:block;
+		float:left;
+		clear:none;
+		background:#fff;
+		border-radius:7px;
+		margin:30px 0 30px 2%;
 	}
-	.conferencebg, .resourcebg, .networkingbg {
-		background:none;
+	.mainscreenright {
+		position:relative;
+		right:inherit;
+		top:inherit;
+		float:right;
+		width:29%;
+		/*display:block;*/
+		clear:none;
+		background:#fff;
+		border-radius:7px;
+		margin:30px 2% 30px 0;
 	}
 	
 	
-	.conzoomlink {
-		bottom:26%;
-		font-size:12px;
-	}
 	
 	
 	
@@ -167,34 +206,59 @@
 		margin:10px auto 0 auto;
 	}
 	
-	.maintopcol1 {
-		margin:0;
-		padding:10px 0 10px 3%;
-	}
-	.maintopcol1 img {
-		height:30px;
-	}
-	.innertopmenubg {
-		top:10px;
-		right:2%;
-	}
-	.attendingbox {
-		top:7px;
-		right:8%;
-	}
-	.conzoomlink {
-		bottom:0;
-		width:90%;
-		padding:10px 5%;
-		font-size:12px;
+	.mainscreenleft {
 		position:relative;
+		left:inherit;
+		top:inherit;
+		width:90%;
+		display:block;
+		float:none;
+		clear:both;
+		background:#fff;
+		border-radius:7px;
+		margin:30px auto;
+	}
+	.mainscreenright {
+		position:relative;
+		right:inherit;
+		top:inherit;
+		float:none;
+		width:90%;
+		/*display:block;*/
+		clear:both;
+		background:#fff;
+		border-radius:7px;
+		margin:30px auto;
 	}
 	
+	.screenright a {
+		width:92%;
+	}
+	
+	.requestmeetingcol1 {
+		float:none;
+		display:block;
+		width:90%;
+		padding:5%;
+	}
+	.reuestlogo {
+		width:200px;
+	}
+	.requestmeetingmainhe {
+		max-height:inherit;
+	}
+	
+	.requestmeetingcol2 {
+		float:none;
+		display:block;
+		width:100%;
+		margin:25px 0 0 0;
+	}
 		
 }
 
 
-@media only screen and (max-width: 650px){ 
+@media only screen and (max-width: 600px){ 
 	.loginbox {
 		float:none;
 		position:relative;
@@ -209,52 +273,65 @@
 		font-size: 10px;
 	}
 	
-	
-	.attendingbox {
-		top:7px;
-		right:14%;
-	}
 	.maintopcol2 {
 		display:block;
+		width:90%;
+		margin:35px auto 0 auto;
+	}
+	.attendingbox {
+		right:50px;
+	}
+	
+	.toplogocol1 {
 		width:100%;
-		margin:60px auto 0 auto;
+		display:block;
+	}
+	.toplogocol1 img {
+		width:180px;
+		margin:0 auto;
+		display:block;
+	}
+	.toplogocol2 {
+		display:none;
+	}
+	.toplogocol3 {
+		width:100%;
+		display:block;
+		margin:20px auto;
+	}
+	.toplogocol4 {
+		width:100%;
+		display:block;
+		text-align:center;
+	}
+	.toplogocol4 span {
+		display:inherit;
+	}
+	.zoomnotreglink {
+		padding:10px 2%;
+		text-align:center;
+		font-size:14px;
+		line-height:normal;
 	}
 	
 	
-	.popupformmain1box {
-		display: table;
-		content: "";
-		width: 100%;
-		clear: both;
-		margin:0 !important;
+	.presentersboxcol1 {
+		float:none;
+		display:block;
+		width:100%;
 	}
-	.popupformmain1boxcol1 {
-		float: none;
-		display: block;
-		width: 100%;
-		margin:10px 0;
+	.presentersboxcol1 img {
+		width:220px;
+		display:table;
+		padding:3%;
+		margin:0 0 15px 0;
 	}
-	.popupformmain1boxcol2 {
-		float: none;
-		display: block;
-		width: 100%;
-		margin:0px 0;
+	.presentersboxcol2 {
+		float:none;
+		display:block;
+		width:100%;
 	}
 	
-	
-	.table2 {
-		border: 2px solid #3329e2;
-	}
-	.table2 th {
-		padding:7px;
-		font-size: 12px;
-		line-height: normal;
-	}
-	.table2 td {
-		padding:7px;
-		line-height: normal;
-		font-size:12px;
-	}
 	
 	
 	.popmainheading1 {
@@ -302,7 +379,7 @@
 		float: none;
 		text-align:center;
 	}
-
+	
 	
 	
 	

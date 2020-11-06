@@ -1,19 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="loginbg">
 
-  <div class="eclogo"><a href="#"><img src="images/eclogo.png" alt=""></a></div>
+  <div class="eclogo"><a href="{{url('/')}}"><img src="images/eh-logo1.png" alt=""></a></div>
 
-  <div class="datetime"><i>13</i>
-    <h6><span>October 2020</span>10:00AM - 5:00PM</h6>
+  <div class="datetime"><i>10</i>
+    <h6><span>December 2020</span>1:30PM - 6:00PM</h6>
   </div>
 
   <div class="loginbox">
-    <div class="loginboxlogo"><a href="#"><img src="images/btwlogo.png?1" alt=""></a></div>
+    <div class="loginboxlogo"><a href="{{url('/')}}"><img src="images/agilent.png" alt=""></a></div>
     <form action="{{ route('userlogin') }}" method="post" id="loginFrm">
       @csrf
-      <h3><i>LOGIN</i> <span>Not Registered? <a href="https://backtowork.expresscomputer.in/register.php"
+      <h3><i>LOGIN</i> <span>Not Registered? <a
+            href="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/register.php"
             target="_blank">Register Now</a></span></h3>
       <h6>If you have already registered, please log in</h6>
       <label>Email Address</label>
@@ -24,68 +27,33 @@
 
   <div class="idxrightcon">
     <h3>Speakers</h3>
-
-    <ul class="nobullet headerslider">
+    <ul class="nobullet">
       <li>
         <div class="group clearboth tac">
           <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/yashwanth.jpg" alt="">
-            <h4>Yashwanth Kumar</h4>
-            <p>Head of Analytics and Insight, Titan Company Limited</p>
+            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/nilangan.jpg" alt="">
+            <h4>Dr. Nilanjan Guha</h4>
+            <p>Ph.D., BDM- Academia & Research, Agilent Technologies</p>
           </div>
           <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/sharad.jpg" alt="">
-            <h4>Sharad Kumar Agarwal</h4>
-            <p>Head – IT,<br> JK Tyre & Industries Ltd</p>
+            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/saurabh.jpg" alt="">
+            <h4>Saurabh Nagpal</h4>
+            <p>Application Engineer - Spectroscopy, Agilent Technologies</p>
           </div>
           <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/lomte.jpg" alt="">
-            <h4>Jagdish Lomte</h4>
-            <p>Vice President (IT) & CIO – BTG, Thermax Ltd</p>
+            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/anuj.jpg" alt="">
+            <h4>Dr. Anuj Gupta</h4>
+            <p>Application Engineer, Diagnostics & Genomics, Agilent Technologies</p>
           </div>
           <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/anantha.jpg" alt="">
-            <h4>Anantha Sayana</h4>
-            <p>Chief Digital Officer, <br>Larsen & Toubro</p>
+            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/deepak.jpg" alt="">
+            <h4>Dr. S A Deepak</h4>
+            <p>Application Engineer – Seahorse Products, Agilent Technologies</p>
           </div>
           <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/vijay.jpg" alt="">
-            <h4>Vijay Sethi</h4>
-            <p>CIO & CHRO,<br> Head Corporate Social Responsibility - Hero MotoCorp</p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/keni.jpg" alt="">
-            <h4>Deepak Keni</h4>
-            <p>EVP - Special Projects & Enabler, Deepak Fertilisers And Petrochemicals Corporation</p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="group clearboth tac">
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/gururaj.jpg" alt="">
-            <h4>Gururaj Rao</h4>
-            <p>VP & CIO,<br> Mahindra & Mahindra Financial Services Group</p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/dhaval.jpg" alt="">
-            <h4>Dhaval Mankad</h4>
-            <p>Vice President, Information Technology, Havmor Ice Cream Pvt Ltd</p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/dipu.jpg" alt="">
-            <h4>Dipu KV</h4>
-            <p>President - Operations, Communities & Customer Experience, Bajaj Allianz </p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/anirudh.jpg" alt="">
-            <h4>Anirudh Shrotriya</h4>
-            <p>Managing Director, SHRO Systems</p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://backtowork.expresscomputer.in/images/sriharsha.jpg" alt="">
-            <h4>Sriharsha Narasimhan</h4>
-            <p>Chief Technology Officer, Aruba, Hewlett Packard Enterprise India Pvt. Ltd.</p>
+            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/ghosh.jpg" alt="">
+            <h4>Dr. Arkasubhra Ghosh</h4>
+            <p>Director, GROW Research Laboratory</p>
           </div>
         </div>
       </li>
@@ -96,17 +64,9 @@
 
 
 </div>
-{{--  <div class="innercontainwrapper">
-  <h2>Partners</h2>
-  <div class="group clearboth tac">
-    <div class="idxpartnersbox">
-      <img src="https://backtowork.expresscomputer.in/images/aruba.gif" alt="">
-    </div>
-  </div>
-</div>  --}}
 <div id="loginpop" class="popmain1">
   <div class="fancybox_content">
-    <h3>VIRTUAL CONFERENCE </h3>
+    <h3>VIRTUAL Event </h3>
     <h2>Back to Work</h2>
     <h4>will be live on</h4>
     <br>
@@ -132,8 +92,6 @@
 
 @section('customJs')
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
-<script src="{{ asset('js/jquery.fancybox.min.js')}}"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
           //openCity(event, 'tue2');
@@ -159,9 +117,8 @@
                 dataType: 'json',
                 success: function(response){
                   if(response.status == 200){
-                    {{--  $.fancybox.open($("#loginpop"));  --}}
-                    
-                    $("#loginFrm")[0].submit();
+                    {{--  $("#loginFrm")[0].submit();  --}}
+                    $.fancybox.open($("#loginpop"));
                   }else{
                     $.fancybox.open($("#resigterpopup"));
                   }

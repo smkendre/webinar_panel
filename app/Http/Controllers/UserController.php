@@ -29,7 +29,7 @@ class UserController extends Controller
     {
         try {
             // update user status
-            $user = Attendees::select('au_id', 'au_unique_id', 'au_email', 'au_phone', 'au_fname', 'au_lname', 'au_company', 'au_job_title')->where('au_forms', '=', 'back_to_business_2020')->where('au_email', '=', $request->email)->orWhere('au_phone', '=', $request->email)->get()->first();
+            $user = Attendees::select('au_id', 'au_unique_id', 'au_email', 'au_phone', 'au_fname', 'au_lname', 'au_company', 'au_job_title')->where('au_forms', '=', 'agilent_disease_mechanisms')->where('au_email', '=', $request->email)->orWhere('au_phone', '=', $request->email)->get()->first();
 
 
             if (!empty($user)) {
@@ -235,7 +235,7 @@ class UserController extends Controller
     {
         try {
             // update user status
-            $user = Attendees::select('au_id', 'au_unique_id', 'au_email', 'au_phone', 'au_fname', 'au_lname', 'au_company', 'au_job_title')->where('au_forms', '=', 'back_to_business_2020')->where('au_email', '=', $request->email)->orWhere('au_phone', '=', $request->email)->get()->first();
+            $user = Attendees::select('au_id', 'au_unique_id', 'au_email', 'au_phone', 'au_fname', 'au_lname', 'au_company', 'au_job_title')->where('au_forms', '=', 'agilent_disease_mechanisms')->where('au_email', '=', $request->email)->orWhere('au_phone', '=', $request->email)->get()->first();
 
 
             if (!empty($user)) {

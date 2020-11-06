@@ -2,11 +2,11 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 
 .fancybox-button{background:rgba(30,30,30,.6);border:0;border-radius:0;box-shadow:none;cursor:pointer;display:inline-block;height:44px;margin:0;padding:10px;position:relative;  transition:color .2s;vertical-align:top;visibility:inherit;width:44px}
 
-.fancybox-button,.fancybox-button:link,.fancybox-button:visited{color:#fff !important}
-.fancybox-button:hover{color:#fff !important}
+.fancybox-button,.fancybox-button:link,.fancybox-button:visited{color:#fff}
+.fancybox-button:hover{color:#fff}
 
 .fancybox-button{
-	background:rgba(51,41,226,1) !important;
+	background:rgba(237,28,36,1);
 }
 
 
