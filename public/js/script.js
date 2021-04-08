@@ -115,16 +115,16 @@ $(document).ready(function () {
         $("#join-" + id).show();
         $("#directLink-" + id).removeClass("hide");
         $("#" + id).html("");
-        $("#parent-" + id).addClass("popconfboxactive");
+        $(".popconfbox").removeClass("popconfboxactive");
+        $("#session_" + id).addClass("popconfboxactive");
         $(".conzoomlink a").attr("href", url);
+        $(".topvideolive").show();
+        $(".livesessiontitle").text(title);
         $("#join-" + id).attr("href", JS_URL + "conference");
         $("#join-" + id).attr("data-timeLeft", minutes);
         clearInterval(x);
       }
 
-      // if (days == 0 && hours == 0 && minutes == -10) {
-      //   $.fancybox.open($("#livealert"));
-      // }
     }, 1000);
   });
 
@@ -206,7 +206,7 @@ var onIdle = function (timeOutSeconds,func){
   var idleTimeout;
   var activity=function() {
       clearTimeout(idleTimeout);
-      console.log('to cleared');
+      // console.log('to cleared');
       idleTimeout = setTimeout(func, timeOutSeconds * 1000);
   }
   $(document).on('mousedown mousemove keypress',activity);

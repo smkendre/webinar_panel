@@ -2,17 +2,17 @@
     <div class="popmainheading1">
         <span>Conference Sessions</span>
         <div class="tab1">
-            <button class="tablinks active" onClick="openCity(event, 'tab12')">13 Oct, 2020</button>
+            <button class="tablinks active" onClick="openCity(event, 'tab16')">10 December, 2020</button>
         </div>
     </div>
     <div class="popmain1con1">
-        {{--  {{dd($agenda)}} --}}
+
         @foreach ($agenda as $session)
-        <div id="tab{{$session->as_id}}" class="tabcontent1" @if($session->as_id == 12) style="display: block;" @endif >
+        <div id="tab{{$session->as_id}}" class="tabcontent1" @if($session->as_id == 16) style="display: block;" @endif >
 
             {{--  {{dd($session)}} --}}
             @foreach ($session->individual_sessions as $row)
-            <div class="popconfbox popconfboxactive">
+            <div class="popconfbox" id="session_{{$row->assm_id}}">
                 <div class="popconfboxcol1">
                     @if($row->assm_status == 1 || $row->assm_status == 2)
                     <h6 class="countdown" id="{{$row->assm_id}}"
@@ -49,10 +49,17 @@
                             @endphp
 
                             @if(!empty($row->speakers) && count($row->speakers) > 0)
-                            <p><span>Speaker: </span>
+                           
 
                                 @foreach ($row->speakers as $sp)
-                                <p> <span>{{$sp->ap_name}},</span> {{$sp->ap_designation}}, {{$sp->ap_company}}</p>
+
+                                <p><span>@if($sp->ap_id == '159') Emcee @else Speaker @endif: </span>
+                                <p> <span>{{$sp->ap_name}}</span>
+                                   @if($sp->ap_designation) , {{$sp->ap_designation}} @endif
+                                    
+                                   @if($sp->ap_company) , {{$sp->ap_company}} @endif
+                                
+                                </p>
 
                                 @php
                                 $speakerImgs[] = '<img src="'.$sp->ap_image.'" alt="" />';
@@ -108,8 +115,6 @@
         </div>
 
         @endforeach
-
-
 
 
     </div>

@@ -21,9 +21,9 @@
 
 
   <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
-  <link href="css/common-text.css" rel="stylesheet" type="text/css" />
-  <link href="css/common-layout.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="css/resrponsive.css">
+  <link href="css/common-text.css?1" rel="stylesheet" type="text/css" />
+  <link href="css/common-layout.css?2" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="css/resrponsive.css?2">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -36,14 +36,15 @@
 
   <div class="loginbg">
 
-    <div class="eclogo"><a href="index.html"><img src="images/eh-logo1.png" alt=""></a></div>
+    <div class="eclogo"><a href="index.html"><span>ORGANISED BY</span><img src="images/eh-logo1.png" alt=""></a></div>
 
     <div class="datetime"><i>10</i>
-      <h6><span>December 2020</span>1:30PM - 5:15PM</h6>
+      <h6><span>December 2020</span>1:30PM - 5:25PM</h6>
     </div>
 
     <div class="loginbox">
-      <div class="loginboxlogo"><a href="index.html"><img src="images/agilent.png" alt=""></a></div>
+      <div class="loginboxlogo"><a href="index.html"><span>EXCLUSIVELY SPONSORED BY</span><img src="images/agilent.png"
+            alt=""></a></div>
       <form action="{{ route('userlogin') }}" method="POST" id="loginFrm">
         @csrf
         <h3><i>LOGIN</i> <span>Not Registered? <a
@@ -51,49 +52,61 @@
               target="_blank">Register Now</a></span></h3>
         <h6>If you have already registered, please log in</h6>
         <label>Email Address</label>
-        <input type="email" id="email" name="email" maxlength="128" value="" required>
+        <input type="email" id="email" name="email" maxlength="128" value="{{app('request')->input('email')}}" required>
         <div class="group clearboth"><button type="submit">Login</button></div>
+        <div class="declemertext">
+          <h5>This is co-hosted by Express Healthcare and Agilent Technologies.</h5>
+          <p> By clicking on Login, you are confirming you are an adult 18 years or older and agree to Express
+            Healthcare contacting you with marketing-related emails or by telephone. You may unsubscribe from receiving
+            such communications from Express Healthcare at any time. Express Healthcare web sites and communications are
+            subject to our Privacy Notice and Terms of Use.</p>
+          <p> Additionally by clicking on Login also agree that Agilent Technologies would keep you updated on
+            products, services, solutions, exclusive offers, and special events. See Agilent Technologies <a
+              href="https://www.agilent.com/home/privacy-policy" target="_blank"><strong>(Privacy Policy)</strong></a>
+            to
+            know how Agilent Technologies processes your personal information in accordance with the Agilent Privacy
+            Statement. You can unsubscribe at any time.</p>
+        </div>
       </form>
+
     </div>
 
     <div class="idxrightcon">
       <h3>Speakers</h3>
       <ul class="nobullet">
         <li>
-          <div class="group clearboth tac">
-            <div class="idxspeakerbox idxspeakerboxheight">
-              <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/nilangan.jpg"
-                alt="">
-              <h4>Dr. Nilanjan Guha</h4>
-              <p>Ph.D., BDM- Academia & Research, Agilent Technologies</p>
-            </div>
-            <div class="idxspeakerbox idxspeakerboxheight">
-              <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/saurabh.jpg"
-                alt="">
-              <h4>Saurabh Nagpal</h4>
-              <p>Application Engineer - Spectroscopy, Agilent Technologies</p>
-            </div>
-            <div class="idxspeakerbox idxspeakerboxheight">
-              <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/anuj.jpg" alt="">
-              <h4>Dr. Anuj Gupta</h4>
-              <p>Application Engineer, Diagnostics & Genomics, Agilent Technologies</p>
-            </div>
-            <div class="idxspeakerbox idxspeakerboxheight">
-              <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/deepak.jpg" alt="">
-              <h4>Dr. S A Deepak</h4>
-              <p>Application Engineer – Seahorse Products, Agilent Technologies</p>
-            </div>
-            <div class="idxspeakerbox idxspeakerboxheight">
-              <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/ghosh.jpg" alt="">
-              <h4>Dr. Arkasubhra Ghosh</h4>
-              <p>Director, GROW Research Laboratory</p>
-            </div>
-          </div>
-        </li>
-
+              <div class="group clearboth tac">
+                  <div class="idxspeakerbox idxspeakerboxheight">
+                      <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/nilangan.jpg" alt="">
+                      <h4>Dr. Nilanjan Guha</h4>
+                      <p>Ph.D., BDM- Academia & Research, Agilent Technologies</p>
+                  </div><div class="idxspeakerbox idxspeakerboxheight">
+                      <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/saurabh.jpg" alt="">
+                      <h4>Saurabh Nagpal</h4>
+        <p>Application Engineer - Spectroscopy, Agilent Technologies</p>
+                  </div><div class="idxspeakerbox idxspeakerboxheight">
+                      <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/anuj.jpg" alt="">
+                      <h4>Dr. Anuj Gupta</h4>
+        <p>Application Engineer, Diagnostics & Genomics, Agilent Technologies</p>
+                  </div><div class="idxspeakerbox idxspeakerboxheight">
+                      <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/deepak.jpg" alt="">
+                      <h4>Dr. S A Deepak</h4>
+        <p>Application Engineer – Seahorse Products, Agilent Technologies</p>
+                  </div><div class="idxspeakerbox idxspeakerboxheight">
+                      <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/ghosh.jpg" alt="">
+                      <h4>Dr. Arkasubhra Ghosh</h4>
+        <p>Director, GROW Research Laboratory</p>
+                  </div><div class="idxspeakerbox idxspeakerboxheight">
+                      <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/gerald.jpg" alt="">
+                      <h4>Dr. Gerald Larrouy Maumus</h4>
+        <p>Senior Lecturer in Molecular Microbiology, MRC-Centre Molecular Biology and Infection (CMBI), Imperial College London, United Kingdom</p>
+                  </div>
+              </div>
+          </li>
+          
       </ul>
-
-    </div>
+      
+  </div>
 
 
   </div>
@@ -194,8 +207,11 @@
                 dataType: 'json',
                 success: function(response){
                   if(response.status == 200){
-                    {{--  $("#loginFrm")[0].submit();  --}}
+                    {{-- if($("#email").val() == 'sangita.kendre@indianexpress.com' || $("#email").val() == 'viraj.mehta@indianexpress.com' || $("#email").val() == 'mansha.indianexpress@gmail.com' ||  $("#email").val() == 'pavneet.sahni@indianexpress.com' ||  $("#email").val() == 'ankush.sharma@agilent.com' ||  $("#email").val() == 'aakshi.sharma@non.agilent.com' ||  $("#email").val() == 'nilanjan_guha@agilent.com' ){  --}}
+                    $("#loginFrm")[0].submit();
+                  {{-- }else{
                     $.fancybox.open($("#loginpop"));
+                  } --}}
                   }else{
                     $.fancybox.open($("#resigterpopup"));
                   }

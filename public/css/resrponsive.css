@@ -17,12 +17,12 @@
 		min-height: 56vh;
 	}
 		
-	.loginbg {
+	/*.loginbg {
 		height:100vh;
-	}
+	}*/
 	.loginbox {
-		width:32%;
-		padding:13% 0 50px 5%;
+		width:36%;
+		padding:10% 0 10% 5%;
 	}
 	.idxrightcon {
 		width:38%;
@@ -254,7 +254,39 @@
 		width:100%;
 		margin:25px 0 0 0;
 	}
-		
+	
+	
+	.suravyformbg {
+		width:90%;
+		margin:0 auto;
+		padding: 5%;
+		border-radius:10px;
+		max-height:inherit;
+		margin:0 auto;
+		background:#fff;
+		overflow-x:inherit;
+	}
+	.suravyform1col1 {
+		float:none;
+		width:100%;
+	}
+	.suravyform1col2 {
+		float:none;
+		width:100%;
+	}
+	.suravyform2wrap1box1 {
+		float:none;
+		display:block;
+		width:96%;
+		margin:2%;
+	}
+	
+	
+	.mainscreensurvay .suravyformbg {
+		width:80%;
+		padding:5%;
+	}
+	
 }
 
 

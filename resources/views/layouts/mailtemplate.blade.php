@@ -15,8 +15,8 @@
 
 			<tr>
 				<td align="center">
-					<img src="https://images.expressbusinesspublications.com/ec/back-to-work/back-to-work-thank-you2.jpg" alt=""
-						width="100%" style="display:table">
+					<img src="https://img.ebpd.in/eh/website/102620/agilent/agilent-thank-you-header1.jpg" alt="" width="100%"
+						style="display:table">
 				</td>
 			</tr>
 
@@ -28,14 +28,8 @@
 						style="color:#000;margin:0 auto;padding:8px 0;line-height:24px;font-family:Verdana,&#39;sans-serif&#39;,Calibri,Arial;font-size:15px;width:80%;margin:25px 5px 0 5px">
 						Dear {{ $name ?? '' }},</h6>
 
-					<p
-						style="color:#000;margin:0 auto;padding:8px 0;margin:0 7px 0 5px;line-height:24px;font-family:Verdana,&#39;sans-serif&#39;,Calibri,Arial;font-size:13px;font-weight:normal">
-						<span>{{ session()->get('username') }} </span> has sent you a private message via Back to work Event, the
-						message is as under - </p>
 
-					<p
-						style="color:#000;margin:0 auto;padding:15px;margin:0 7px 0 5px;line-height:24px;font-family:Verdana,&#39;sans-serif&#39;,Calibri,Arial;font-size:13px;font-weight:normal;font-style: italic;background: #e5e5e5;border-radius: 6px;">
-						{{ $content ?? '' }}</span> </p>
+					{!! $content ?? '' !!}
 
 					<p
 						style="font-weight:normal;color:#000;font-size:13px;font-family:Verdana,&#39;sans-serif&#39;,Calibri,Arial;margin:0 7px 0 3px;word-spacing:0px;padding:8px 0;line-height:25px;">
@@ -62,11 +56,16 @@
 							style="text-decoration:none;color:#000;font-weight:bold">{{ session()->get('useremail') ?? '' }}</a></p>
 
 					<p
+						style="color:#000;margin:0 auto;padding:8px 0;margin:0 7px 0 5px;line-height:20px;font-family:Verdana,&#39;sans-serif&#39;,Calibri,Arial;font-size:13px">
+						<span style="color:#4b5aa3;font-weight:bold">Phone Number: - </span> <a href="javascript:"
+							style="text-decoration:none;color:#000;font-weight:bold">{{ session()->get('userphone') ?? '' }}</a></p>
+
+					<p
 						style="color:#000;margin:0 7px 0 5px;padding:8px 0;font-family:Verdana,&#39;sans-serif&#39;,Calibri,Arial;font-size:13px;font-weight:bold">
 						<span style="color:#4b5aa3;font-size:14px">Thanks,</span> <br>
-						Team Back to Work <br>
-						<a href="https://backtowork.expresscomputer.in/" style="color:#000;text-decoration:none"
-							target="_blank">backtowork.expresscomputer.in</a></p>
+						Team Express Healthcare <br>
+						<a href="https://www.expresshealthcare.in/" style="color:#000;text-decoration:none"
+							target="_blank">www.expresshealthcare.in</a></p>
 
 				</td>
 			</tr>

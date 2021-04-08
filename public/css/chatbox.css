@@ -89,7 +89,7 @@
 .attendechattextsend {
 	width:96%;
 	padding:5px 2%;
-	background:#fff;
+	background:#fff !important;
 	position:absolute;
 	bottom:0;
 	left:0;
@@ -100,6 +100,9 @@
 	border-bottom-right-radius:7px;
 	border-top:2px solid #dedede;
 	z-index: 999;
+}
+.popmain1con1 .attendechattextsend {
+	width:100%;
 }
 .attendechattextsend textarea {
 	width:80%;

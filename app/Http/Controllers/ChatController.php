@@ -30,13 +30,17 @@ class ChatController extends Controller
         if ($request->isMethod('POST')) {
             // dd($request->email);
             $to_id = $request->to_id;
-            $email = $request->email;
+           // $email = $request->email;
             $subject = $request->subject;
             $message = $request->message;
             $receiver_name = $request->receiver_name;
             $from_id = session()->get('daid');
             $username = session()->get('username');
 
+            // get email from id 
+
+            $user = DB::table('attendees')->select('au_email')->where('au_id', '=', $to_id)->get()->first();
+            $email = $user->au_email;
             $this->common->send_mail($receiver_name, $email, $message, $subject);
             // $user = 
             DB::table('email_connect')->insert([

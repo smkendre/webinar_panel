@@ -60,7 +60,7 @@
   line-height: 36px;
   color: #f37167;
   padding: 10px 0 20px 0;
-  text-transform: uppercase;    
+  text-transform: uppercase;
 }
 .fancybox_content h4 {
   font-family: "AvenirLTStd-Black";
@@ -103,4 +103,8 @@
   cursor: pointer;
   letter-spacing: 0;
   margin: 20px auto 0 auto;
+}
+.btnWrapper {
+  margin: 0 auto;
+  text-align: center;
 }

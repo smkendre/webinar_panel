@@ -90,10 +90,10 @@ class CommonClass
             // dd(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
             Mail::send(['html' => 'layouts.mailtemplate'], $data, function ($message) use ($email, $subject) {
                 $message->to($email)->subject($subject);
-                $message->from('info@technologysabha.com', session()->get('username'));
+                $message->from('events@expresshealthcare.co.in', session()->get('username'));
             });
         } catch (\Exception $e) {
-            dd($e);
+            // dd($e);
 
             return $e;
         }
@@ -251,16 +251,16 @@ class CommonClass
                 $panelistsArr = explode(',', $sp->assm_panelists_id);
 
                 // speakers
-                $sp->speakers = DB::table('speakers')->select('ap_image', 'ap_name', 'ap_designation', 'ap_company')->whereIn('ap_id', $seakersArr)->get();
+                $sp->speakers = DB::table('speakers')->select('ap_image', 'ap_name', 'ap_designation', 'ap_company', 'ap_id')->whereIn('ap_id', $seakersArr)->get();
 
                 // Panalist
                 if (!empty($panelistsArr)) {
-                    $sp->panelists = DB::table('speakers')->select('ap_image', 'ap_name', 'ap_designation', 'ap_company')->whereIn('ap_id', $panelistsArr)->get();
+                    $sp->panelists = DB::table('speakers')->select('ap_image', 'ap_name', 'ap_designation', 'ap_company', 'ap_id')->whereIn('ap_id', $panelistsArr)->get();
                 }
 
                 // moderator
                 if ($sp->assm_moderator_id) {
-                    $sp->moderator = DB::table('speakers')->select('ap_image', 'ap_name', 'ap_designation', 'ap_company')->where('ap_id', '=', $sp->assm_moderator_id)->get()->first();
+                    $sp->moderator = DB::table('speakers')->select('ap_image', 'ap_name', 'ap_designation', 'ap_company', 'ap_id')->where('ap_id', '=', $sp->assm_moderator_id)->get()->first();
                 }
                 DB::enableQueryLog();
                 $url = DB::table('session_attendees_mappings')
@@ -299,13 +299,20 @@ class CommonClass
         // help desk channel id
         $data['help_chat_channel'] = env('HELP_DESK_CHAT_CHANNEL');
 
-        // get logged in users data
-        $data['now_attending'] = DB::table('attendees')
-        ->join('session_trackings', 'session_trackings.st_au_id', '=', 'attendees.au_id')
-        ->where('st_track_type', '=', 'login')
-        ->where('st_start_datetime', '>', date('Y-m-d 00:00:00'))
-        ->groupBy('session_trackings.st_au_id')
-        ->orderBy('st_start_datetime', 'DESC')->get();
+        // // get logged in users data
+        // $data['now_attending'] = DB::table('attendees')
+        // ->join('session_trackings', 'session_trackings.st_au_id', '=', 'attendees.au_id')
+        // ->where('st_track_type', '=', 'login')
+        // ->where('st_start_datetime', '>', date('Y-m-d 00:00:00'))
+        // ->groupBy('session_trackings.st_au_id')
+        // ->orderBy('st_start_datetime', 'DESC')->get();
+
+
+        $data['speakers'] = DB::table('speakers')->select('ap_image', 'ap_name', 'ap_designation', 'ap_company', 'ap_id', 'ap_description')->where('ap_as_id', '=', env('EVENT_ID'))->where('ap_id', '!=', '159')->get();
+
+
+        $data['assets'] = DB::table('downloads')->select('ad_title', 'ad_type', 'ad_url', 'ad_image', 'ad_id')->where('ad_asp_slug', '=', 'agilent')->get();
+
 
         if (session()->get('is_verified')) {
             $sess_id = $this->session_start_tracking(session()->get('daid'), 'page_visit', request()->ip(), 0, $view);

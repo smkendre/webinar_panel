@@ -4,31 +4,39 @@
 @csrf
 
 
-<div class="innermaincontain">
+<div class="group clearboth">
+  <div class="mainscreenleft">
+    <div class="toplogowrapper">
+      <div class="toplogocol1"><span>Exclusively Sponsored by</span><a href="#"><img src="images/agilent1.png"
+            alt=""></a></div>
+      <div class="toplogocol2"><img src="images/toplogo-line.gif" alt=""></div>
+      <div class="toplogocol3">
+        <div class="topvideolive" style="display: none">
+          <div class="topvideoliveicon">
+            <div class="circle--outer"></div>
+            <div class="circle--inner"></div>
+          </div>
+          <a>Live Now</a>
+        </div>
+      </div>
+      <div class="toplogocol2"><img src="images/toplogo-line.gif" alt=""></div>
+      <div class="toplogocol4 livesessiontitle">Omics and its relevance in<span>understanding disease mechanisms</span>
+      </div>
+    </div>
 
-  <a data-fancybox href="video_tracking('https://player.vimeo.com/video/467649337?autoplay=1', 'ondemand', 54)" class="confrancebanner1"><img src="images/trs.png" alt=""></a>
-  <a data-fancybox href="video_tracking('https://player.vimeo.com/video/467649337?autoplay=1', 'ondemand', 54)" class="confrancebanner2"><img src="images/trs.png" alt=""></a>
+    <div class="mainscreenvideo">
+      {{--  <iframe src="https://vimeo.com/event/522199/embed/48dea1a8a0" frameborder="0" allow="autoplay; fullscreen"
+        allowfullscreen></iframe>  --}}
+      <iframe src="https://player.vimeo.com/video/489804289?autoplay=1" frameborder="0" allow="autoplay; fullscreen"
+        allowfullscreen></iframe>
+    </div>
 
-  <img src="https://img.ebpd.in/ec/website/backtowork/oct2020/confrance.jpg" alt="" class="rsinnerimg">
+    {{--  <div class="zoomnotreglink">Unable to view the video? <a href="#">Join this webinar on Zoom</a></div>  --}}
+  </div>
+
+  @include('layouts.handouts')
+  {{--  @include('layouts.chat')  --}}
+
 
 </div>
-
-{{--  <div class="conzoomlink">Unable to view Live Video? <a href="#" target="_blank"> Click here to join this session on Zoom</a></div>  --}}
-<a data-fancybox id="introvideo" href="https://player.vimeo.com/video/467649337?autoplay=1"></a>
-
-@endsection
-
-@section('js_after')
-<script>
-  window.jQuery(document).ready(function() {
-		{{--  var box = $('#introvideo');
-    $.fancybox.open(box);  --}}
-     video_tracking('https://player.vimeo.com/video/467649337?autoplay=1', 'ondemand', 54);
-   var event_id = $('#event_id').val();
-   var login_url = $("#join-"+event_id).attr('data-url');
-    $(".conzoomlink a").attr('href', login_url);
-  });
-  
-</script>
-
 @endsection

@@ -29,38 +29,38 @@
     <h3>Speakers</h3>
     <ul class="nobullet">
       <li>
-        <div class="group clearboth tac">
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/nilangan.jpg" alt="">
-            <h4>Dr. Nilanjan Guha</h4>
-            <p>Ph.D., BDM- Academia & Research, Agilent Technologies</p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/saurabh.jpg" alt="">
-            <h4>Saurabh Nagpal</h4>
-            <p>Application Engineer - Spectroscopy, Agilent Technologies</p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/anuj.jpg" alt="">
-            <h4>Dr. Anuj Gupta</h4>
-            <p>Application Engineer, Diagnostics & Genomics, Agilent Technologies</p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/deepak.jpg" alt="">
-            <h4>Dr. S A Deepak</h4>
-            <p>Application Engineer – Seahorse Products, Agilent Technologies</p>
-          </div>
-          <div class="idxspeakerbox idxspeakerboxheight">
-            <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/ghosh.jpg" alt="">
-            <h4>Dr. Arkasubhra Ghosh</h4>
-            <p>Director, GROW Research Laboratory</p>
-          </div>
-        </div>
-      </li>
-
+            <div class="group clearboth tac">
+                <div class="idxspeakerbox idxspeakerboxheight">
+                    <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/nilangan.jpg" alt="">
+                    <h4>Dr. Nilanjan Guha</h4>
+                    <p>Ph.D., BDM- Academia & Research, Agilent Technologies</p>
+                </div><div class="idxspeakerbox idxspeakerboxheight">
+                    <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/saurabh.jpg" alt="">
+                    <h4>Saurabh Nagpal</h4>
+      <p>Application Engineer - Spectroscopy, Agilent Technologies</p>
+                </div><div class="idxspeakerbox idxspeakerboxheight">
+                    <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/anuj.jpg" alt="">
+                    <h4>Dr. Anuj Gupta</h4>
+      <p>Application Engineer, Diagnostics & Genomics, Agilent Technologies</p>
+                </div><div class="idxspeakerbox idxspeakerboxheight">
+                    <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/deepak.jpg" alt="">
+                    <h4>Dr. S A Deepak</h4>
+      <p>Application Engineer – Seahorse Products, Agilent Technologies</p>
+                </div><div class="idxspeakerbox idxspeakerboxheight">
+                    <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/ghosh.jpg" alt="">
+                    <h4>Dr. Arkasubhra Ghosh</h4>
+      <p>Director, GROW Research Laboratory</p>
+                </div><div class="idxspeakerbox idxspeakerboxheight">
+                    <img src="https://lp.expresshealthcare.in/virtualconference/agilent/omnicsevent/images/gerald.jpg" alt="">
+                    <h4>Dr. Gerald Larrouy Maumus</h4>
+      <p>Senior Lecturer in Molecular Microbiology, MRC-Centre Molecular Biology and Infection (CMBI), Imperial College London, United Kingdom</p>
+                </div>
+            </div>
+        </li>
+        
     </ul>
-
-  </div>
+    
+</div>
 
 
 </div>

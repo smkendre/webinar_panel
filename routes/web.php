@@ -22,8 +22,10 @@ Auth::routes();
 Route::group(['middleware' => ['usersession']], function () {
     Route::get('/conference', 'SessionsController@index')->name('conference');
     Route::get('/lobby', 'SessionsController@lobby')->name('lobby');
-    //Route::get('/agenda', 'SessionsController@agenda')->name('agenda');
+    Route::get('/countdown', 'UserController@countdown')->name('countdown');
     Route::get('/awards', 'SessionsController@awards')->name('awards');
+    Route::get('/survey', 'SessionsController@survey')->name('survey');
+    Route::post('/survey_response', 'SessionsController@save_response')->name('survey_response');
 
     Route::get('/networking', 'ChatController@index')->name('networking');
     Route::get('/networking/{id}', 'videoMeetController@meeting')->name('meeting');
@@ -47,4 +49,7 @@ Route::group(['middleware' => ['usersession']], function () {
     Route::get('/chat', 'TokenController@index')->name('chat-index');
 
     Route::post('/createmeet', 'videoMeetController@createmeet')->name('createmeet');
+    
+    Route::post('/request-meeting', 'RequestMeetingController@store')->name('request-meeting');
+    Route::post('/ask-question', 'QuestionController@store')->name('ask-question');
 });

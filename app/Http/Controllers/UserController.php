@@ -44,7 +44,9 @@ class UserController extends Controller
 
                 $this->common->session_start_tracking($user->au_id, 'login', $request->ip());
 
-                return redirect('/conference');
+                // return redirect('/conference');
+                return redirect('/survey');
+                // return redirect('/countdown');
             } else {
                 return redirect()->back()->with('msg', 'You have not registered for event.');
             }
@@ -106,45 +108,45 @@ class UserController extends Controller
                     $attendee_id = $data->id;
                 }
 
-                foreach ($sessionData as $key => $value) {
-                    DB::enableQueryLog();
-                    $is_added = DB::table('sessions')
-                    ->select('sessions.as_id', 'session_attendees_mappings.asam_id')
-                    ->join('session_attendees_mappings', 'session_attendees_mappings.asam_as_id', '=', 'sessions.as_id')
-                    ->join('session_speakers_mapping', 'session_speakers_mapping.assm_as_id', '=', 'sessions.as_id')
-                    ->where('session_attendees_mappings.asam_au_id', '=', $attendee_id)->where('session_speakers_mapping.assm_webinar_id', '=', $key)->get()->first();
+                // foreach ($sessionData as $key => $value) {
+                //     DB::enableQueryLog();
+                //     $is_added = DB::table('sessions')
+                //     ->select('sessions.as_id', 'session_attendees_mappings.asam_id')
+                //     ->join('session_attendees_mappings', 'session_attendees_mappings.asam_as_id', '=', 'sessions.as_id')
+                //     ->join('session_speakers_mapping', 'session_speakers_mapping.assm_as_id', '=', 'sessions.as_id')
+                //     ->where('session_attendees_mappings.asam_au_id', '=', $attendee_id)->where('session_speakers_mapping.assm_webinar_id', '=', $key)->get()->first();
 
-                    if (empty($is_added)) {
-                        // $session = DB::table('sessions')
-                        // ->select('as_id')
-                        // ->join('session_speakers_mapping', 'session_speakers_mapping.assm_as_id', '=', 'sessions.as_id')
+                //     if (empty($is_added)) {
+                //         // $session = DB::table('sessions')
+                //         // ->select('as_id')
+                //         // ->join('session_speakers_mapping', 'session_speakers_mapping.assm_as_id', '=', 'sessions.as_id')
 
-                        // ->where('assm_webinar_id', '=', $row['key'])->get()->first();
+                //         // ->where('assm_webinar_id', '=', $row['key'])->get()->first();
 
-                        // $query = DB::getQueryLog();
+                //         // $query = DB::getQueryLog();
 
-                        // if (!empty($session)) {
-                            DB::table('session_attendees_mappings')->insert([
-                                'asam_au_id' => $attendee_id,
-                                'asam_as_id' => $key,
-                                'asam_login_url' => $value,
-                                'asam_created_at' => date('Y-m-d H:i:s'),
-                            ]);
-                        // }
-                    } else {
-                        //   dd($is_added, $session);
-                        DB::table('session_attendees_mappings')->where('asam_id', '=', $is_added->asam_id)->update([
-                            'asam_au_id' => $attendee_id,
-                            'asam_as_id' => $key,
-                            'asam_login_url' => $value,
-                            'asam_updated_at' => date('Y-m-d H:i:s'),
-                        ]);
-                    }
-                }
+                //         // if (!empty($session)) {
+                //             DB::table('session_attendees_mappings')->insert([
+                //                 'asam_au_id' => $attendee_id,
+                //                 'asam_as_id' => $key,
+                //                 'asam_login_url' => $value,
+                //                 'asam_created_at' => date('Y-m-d H:i:s'),
+                //             ]);
+                //         // }
+                //     } else {
+                //         //   dd($is_added, $session);
+                //         DB::table('session_attendees_mappings')->where('asam_id', '=', $is_added->asam_id)->update([
+                //             'asam_au_id' => $attendee_id,
+                //             'asam_as_id' => $key,
+                //             'asam_login_url' => $value,
+                //             'asam_updated_at' => date('Y-m-d H:i:s'),
+                //         ]);
+                //     }
+                // }
 
                 return  response()->json([
                 'status' => 200,
-                'msg' => 'User Registered',
+                'msg' =>  $email .' User Registered',
             ], 200);
             } catch (Exception $e) {
                 return response()->json(['error' => $e->getMessage()], 304);
@@ -257,4 +259,8 @@ class UserController extends Controller
         }
     }
 
+
+    public function countdown(){
+        return view('layouts.countdown');
+    }
 }
